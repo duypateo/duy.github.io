@@ -1,0 +1,56 @@
+* { margin: 0; padding: 0; box-sizing: border-box;outline: none;}
+h1, h2, h3, h4, h5, h6, ul, li, p { margin: 0; padding: 0px }
+ul { display: block; position: relative;}
+li { list-style: none; float: left }
+a { text-decoration: none }
+div { display: block }
+.over-hidden { overflow: hidden; }
+.back-none { background: none }
+.relative { position: relative }
+.absolute { position: absolute }
+.centered { display: block!important; margin: auto }
+.text-upp { text-transform: uppercase }
+.text-cap { text-transform: capitalize }
+.center-content { text-align: center }
+.fullparent { top: 0; left: 0; width: 100%; height: 100% }
+.fluid-width { width: 100%!important; }
+.horizontal-center { display: flex; flex-direction: row; justify-content: center }
+.vertical-center { display: flex; flex-direction: column; justify-content: center }
+.block { display: block }
+.i-block { display: inline-block }
+.pad-0 { padding: 0 }
+.pad-0-10 { padding: 0 10px }
+.pad-10-0 { padding: 10px 0 }
+.pad-10 { padding: 10px }
+.pad-30-0 { padding: 30px 0 }
+.pad-0-30 { padding: 0 30px }
+.pad-30 { padding: 30px }
+.pad-20-0 { padding: 20px 0 }
+.pad-0-20 { padding: 0px 20px }
+.pad-20 { padding: 20px }
+.mar-0 { margin: 0 }
+.mar-20-0 { margin: 20px 0px }
+.mar-20 { margin: 20px }
+.mar-0-20 { margin: 0 20px }
+.mar-10-0 { margin: 10px 0 }
+.mar-0-10 { margin: 0px 10px }
+.mar-10 { margin: 10px }
+.mar-30-0{margin:30px 0;}
+.mar-0-30{margin: 0px 30px;}
+.mar-bot-10 { margin-bottom: 10px }
+.mar-bot-20 { margin-bottom: 20px }
+.mar-bot-30 { margin-bottom: 30px }
+.s-12 *, .s-12 { font-size: 12px!important; }
+.s-14 *, .s-14 { font-size: 14px }
+.s-16 *, .s-16 { font-size: 16px }
+.s-18 *, .s-18 { font-size: 18px }
+.s-20 *, .s-20 { font-size: 20px }
+.s-22 *, .s-22 { font-size: 22px }
+.s-24 *, .s-24 { font-size: 24px }
+.s-26 *, .s-26 { font-size: 26px }
+.s-28 *, .s-28 { font-size: 28px }
+.s-30 *, .s-30 { font-size: 30px }
+.reset-tab>div>div, .reset-tab>div, .reset-tab>ul, .reset-tab>ul>li>a, .reset-tab>ul>li { border: none; background: none; outline: none; }
+.cf:before,.cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+input,textarea,select,button{margin-bottom: 0;}
