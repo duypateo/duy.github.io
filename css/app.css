@@ -705,6 +705,16 @@ body {
 	.content-text h1{
 		font-size: 4em;
 	}
+	.slideLeftIn {
+		animation: slideLeftIN 1s ease;
+		animation-fill-mode: both;
+	}
+	.slideLeftOut {
+		animation: slideLeftOUT 1s ease;
+		-webkit-animation: slideLeftOUT 1s ease;
+		animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
+	}
 }
 @media screen and (max-width:640px) {
 	.portfolio-item {
@@ -743,17 +753,6 @@ body {
 }
 /*END RESPONSIVE*/
 /* SLIDE ANIMATION */
-@-webkit-keyframes slideInUp {
-	from {
-		-webkit-transform: translate3d(0, 100%, 0);
-		transform: translate3d(0, 100%, 0);
-		visibility: visible;
-	}
-	to {
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-}
 @keyframes slideInUp {
 	from {
 		-webkit-transform: translate3d(0, 100%, 0);
@@ -763,28 +762,6 @@ body {
 	to {
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
-	}
-}
-.slideInUp {
-	z-index: 9999;
-	-webkit-animation-name: slideInUp;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease;
-	animation-name: slideInUp;
-	animation-duration: 1s;
-	animation-timing-function: ease;
-	animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
-}
-@-webkit-keyframes slideOutDown {
-	from {
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-	to {
-		visibility: hidden;
-		-webkit-transform: translate3d(0, 100%, 0);
-		transform: translate3d(0, 100%, 0);
 	}
 }
 @keyframes slideOutDown {
@@ -798,23 +775,6 @@ body {
 		transform: translate3d(0, 100%, 0);
 	}
 }
-.slideOutDown {
-	z-index: 0;
-	-webkit-animation-name: slideOutDown;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: ease;
-	animation-name: slideOutDown;
-	animation-duration: 1s;
-	animation-timing-function: ease;
-	animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
-}
-.slideLeftIn {
-	animation: slideLeftIN 1s ease;
-	-webkit-animation: slideLeftIN 1s ease;
-	animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
-}
 @keyframes slideLeftIN {
 	from {
 		transform: translate(-100%, 0);
@@ -822,39 +782,13 @@ body {
 	}
 	to {
 		transform: translate(0, 0);
-		opacity: 0.9;
+		opacity: 1;
 	}
-}
-@-webkit-keyframes slideLeftIN {
-	from {
-		transform: translate(-100%, 0);
-		opacity: 0.2;
-	}
-	to {
-		transform: translate(0, 0);
-		opacity: 0.9;
-	}
-}
-.slideLeftOut {
-	animation: slideLeftOUT 1s ease;
-	-webkit-animation: slideLeftOUT 1s ease;
-	animation-fill-mode: both;
-	-webkit-animation-fill-mode: both;
 }
 @keyframes slideLeftOUT {
 	from {
 		transform: translate(0, 0);
-		opacity: 0.9;
-	}
-	to {
-		transform: translate(-100%, 0);
-		opacity: 0.2;
-	}
-}
-@-webkit-keyframes slideLeftOUT {
-	from {
-		transform: translate(0, 0);
-		opacity: 0.9;
+		opacity: 1;
 	}
 	to {
 		transform: translate(-100%, 0);
@@ -870,6 +804,20 @@ body {
 		opacity: 1;
 		transform: scale(1);
 	}
+}
+.slideInUp {
+	z-index: 9999;
+	animation-name: slideInUp;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+.slideOutDown {
+	z-index: 0;
+	animation-name: slideOutDown;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
 }
 /* END ANIMATION */
 /* EDIT */
