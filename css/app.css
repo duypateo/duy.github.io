@@ -80,9 +80,12 @@ div {
 	left: 0;
 }
 /* END USEFUL CSS CLASS */
+h1,h2,h3,h4,h5,h6{
+	font-family: GothamMedium;
+}
 body {
 	color: #606060;
-	font-family: GothamLight;
+	font-family: GothamMedium;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -201,7 +204,6 @@ body {
 }
 .footer-text {
 	padding: 25px 0;
-	font-family: GothamMedium;
 	font-size: 12.5px;
 }
 .footer-text a {
@@ -267,7 +269,6 @@ body {
 	overflow-y: scroll;
 	padding: 65px 20px 65px 0px;
 	color: #303030;
-	font-family: GothamMedium;
 }
 .service-infor h1, .about-infor h1, .edu-infor h1, .contact-infor h1 {
 	font-size: 40px;
@@ -277,6 +278,7 @@ body {
 	line-height: 43px;
 	margin-bottom: 30px;
 }
+.area-quote,
 .about-infor h4 {
 	font-family: GothamBold;
 	font-size: 18px;
@@ -285,9 +287,23 @@ body {
 	color: #aaa;
 	margin-bottom: 20px;
 }
+.area-quote{
+	margin: 0;
+	line-height: 24px!important;
+}
+.area-quote span{
+	font-size: 14px;
+	display: block;
+	color: #555;
+}
 .service-infor p, .about-infor p, .edu-infor p, .contact-infor p {
 	margin-bottom: 25px;
 	color: #606060;
+}
+.service-infor .contactme-text{
+	margin-top: 10px;
+	display: block;
+	font-size: 24px;
 }
 .about-infor p {
 		color: #555!important;
@@ -338,9 +354,6 @@ body {
 .c-555{
 	color: #555!important;
 }
-.contact-wrap {
-	padding: 20px 0;
-}
 .contact-item {
 	margin: 15px 0;
 }
@@ -357,7 +370,6 @@ body {
 	left: 0px;
 }
 .contact-text {
-	font-family: GothamMedium;
 	font-size: 12px;
 	color: #606060;
 }
@@ -394,11 +406,8 @@ body {
 	left: 4px;
 }
 /* SERVICE */
-.work-ul-wrap, .service-ul-wrap, .edu-ul-wrap,  {
-	font-family: GothamRegular;
-}
 .work-ul-wrap ul, .service-ul-wrap ul, .edu-ul-wrap ul{
-	margin: 40px 0;
+	margin: 20px 0;
 	display: block;
 	position: relative;
 	overflow: hidden;
@@ -407,9 +416,6 @@ body {
 	width: 50%;
 	padding: 0 5px;
 	margin-bottom: 10px;
-}
-.work-ul-wrap li h5, .edu-ul-wrap li h5 {
-	font-family: GothamMedium;
 }
 .work-ul-wrap li p, .service-ul-wrap li p, .edu-ul-wrap li p {
 	padding: 5px;
@@ -439,14 +445,7 @@ body {
 }
 .portfolio-item {
 	padding: 30px 6%;
-}
-.portf-main:hover .port-hover a {
-	opacity: 0.85;
-	background: #fff;
-}
-.portf-main:hover .port-hover a img {
-	visibility: visible !important;
-	animation: zoomIN 0.5s ease-in-out;
+	margin-bottom: 30px;
 }
 .port-ordinal {
 	position: absolute;
@@ -456,35 +455,24 @@ body {
 	border-bottom: solid 1px #888;
 	width: 80px;
 	text-align: right;
+	z-index: 1;
 }
 .port-main a {
 	display: block;
 }
 .portf-main>a>img{
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	transition: object-position 15s linear, grayscale .2s;
+	height: 300px;
+	object-fit: cover;
+	object-position: top;
+	filter: grayscale(80%);
 	width: 100%;
+	z-index: -1;
 }
-.port-hover {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 5%;
-}
-.port-hover a {
-	display: flex;
-	width: 100%;
-	height: 100%;
-	flex-direction: column;
-	justify-content: center;
-	background: none;
-	transition: all 0.5s ease-in-out;
-}
-.port-hover a img {
-	display: block;
-	width: 26px;
-	margin: auto;
-	visibility: hidden;
+.portf-main a:hover img{
+	filter: grayscale(0%);
+	object-position: bottom;
 }
 .port-text {
 	padding: 20px 0;
@@ -492,7 +480,6 @@ body {
 .port-text span {
 	display: block;
 	font-weight: bold;
-	margin-bottom: 5px;
 	font-size: 16px;
 	color: #303030;
 }
@@ -503,13 +490,14 @@ body {
 	left: -40px;
 	text-align: left;
 }
+.right a>img{
+	box-shadow: 0 -5px 15px rgba(0,0,0,.5);
+}
 /* EDUCATION PAGE */
 .edu-page,.contact-page {
 	background: #fff;
 }
 .edu-ul-wrap h5 {
-
-	/* padding: 5px 0; */
 	line-height: 20px;
 	margin-bottom: 15px;
 	color: #606060;
@@ -592,6 +580,10 @@ body {
 	}
 }
 @media screen and (max-width:1023px) {
+	.content-text h2,
+	.content-text h1{
+		font-size: 50px;
+	}
 	.about-page, .service-page, .edu-page, .contact-page {
 		padding-left: 20px;
 	}.service-img, .about-img, .contact-img, .edu-img,
@@ -614,7 +606,7 @@ body {
 }
 @media screen and (max-width:768px) {
 	.main-nav{
-		margin-top: 30px;
+		margin-top: 10px;
 	}
 	.side-menu {
 		display: block;
@@ -704,6 +696,10 @@ body {
 	.content-text h2,
 	.content-text h1{
 		font-size: 4em;
+	}
+	.typewrite{
+		color: #888!important;
+		padding-left: 5px;
 	}
 	.slideLeftIn {
 		animation: slideLeftIN 1s ease;
