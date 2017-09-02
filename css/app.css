@@ -507,6 +507,7 @@ body {
 .right .port-ordinal {
 	left: -40px;
 	text-align: left;
+	top: 220px;
 }
 .right a>img{
 	box-shadow: 0 -5px 15px rgba(0,0,0,.5);
