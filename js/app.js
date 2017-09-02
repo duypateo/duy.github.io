@@ -1,4 +1,10 @@
 $(document).foundation();
+jQuery(window).load(function() {
+  $(".loading-waiter").show(0);
+  setTimeout(function(){
+    $(".loading-waiter").fadeOut();
+  },4000);
+})
 var TxtType = function(el, toRotate, period) {
 	this.toRotate = toRotate;
 	this.el = el;
