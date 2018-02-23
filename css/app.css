@@ -790,6 +790,10 @@ body {
 /*RESPONSIVE*/
 
 @media screen and (max-width:1170px) {
+	.background-img {
+		background-size: cover;
+		background-position: 25%;
+	}
   .side-menu {
     padding: 20px 0;
   }
