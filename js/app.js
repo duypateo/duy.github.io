@@ -1,9 +1,8 @@
 $(document).foundation();
 jQuery(window).load(function() {
-  $(".loading-waiter").show(0);
   setTimeout(function(){
     $(".loading-waiter").fadeOut();
-  },4000);
+  },2500);
 })
 var TxtType = function(el, toRotate, period) {
 	this.toRotate = toRotate;
@@ -54,7 +53,7 @@ window.onload = function() {
 	document.body.appendChild(css);
 };
 jQuery(document).ready(function($) {
-	var menuLink = $('.main-nav ul li a');
+	var menuLink = $('.main-nav ul li a').not('#down_cv');
 	var page = $('.page');
 	var menuBtn = $('.mobile-btn');
 	var mobileNav = $('.core-menu');
