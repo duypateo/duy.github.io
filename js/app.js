@@ -2,7 +2,7 @@ $(document).foundation();
 jQuery(window).load(function() {
   setTimeout(function(){
     $(".loading-waiter").fadeOut();
-  },2500);
+  },100);
 })
 var TxtType = function(el, toRotate, period) {
 	this.toRotate = toRotate;
